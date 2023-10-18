@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Library</h1>
+        <button class="add-book">Add New Book</button>
+      </header>
+      <main>
+        <section class="books"></section>
+      </main>
+    </div>
+
+    <dialog class="modal">
+      <form class="modal__form">
+        <div class="modal__form-header flex items-center">
+          <h2>Add New Book</h2>
+          <button class="modal__form-close-icon">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="modal__form-group">
+          <label for="title">Book Title</label>
+          <input type="text" name="title" id="title" />
+        </div>
+        <div class="modal__form-group">
+          <label for="author">Book Author</label>
+          <input type="text" name="author" id="author" />
+        </div>
+        <div class="modal__form-group">
+          <label for="pages">Number of Pages</label>
+          <input type="number" name="pages" id="pages" />
+        </div>
+        <div class="modal__form-group">
+          <span>Have you read the book?</span>
+          <div class="flex gap-2">
+            <div class="flex items-center gap-1">
+              <input type="radio" name="read" id="read--yes" />
+              <label for="read--yes">Yes</label>
+            </div>
+            <div class="flex items-center gap-1">
+              <input type="radio" name="read" id="read--no" />
+              <label for="read--no">No</label>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="modal__form-submit">Submit</button>
+      </form>
+    </dialog>
+  </body>
+</html>
