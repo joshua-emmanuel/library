@@ -64,6 +64,7 @@ function addBook(event) {
   const book = new Book(title, author, numberOfPages, read, bookId);
   addBooKToLibrary(book);
   addBookToDOM(book);
+  form.reset();
   modal.close();
 }
 
